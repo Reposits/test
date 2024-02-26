@@ -53,7 +53,8 @@ function Library:new(options)
 		GUI["2"]["AnchorPoint"] = Vector2.new(0, 0);
 		GUI["2"]["Size"] = UDim2.new(0.45, 0 ,0.51, 0);
 		GUI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		GUI["2"]["Position"] = UDim2.fromOffset((viewport.X/2) - (GUI["2"].Size.X.Scale / 2), (viewport.Y/2) - (GUI["2"].Size.Y.Scale / 2));
+		--GUI["2"]["Position"] = UDim2.fromOffset((viewport.X/2) - (GUI["2"].Size.X.Scale / 2), (viewport.Y/2) - (GUI["2"].Size.Y.Scale / 2));
+		GUI["2"]["Position"] = UDim2.new(0.5, 0 ,0.5, 0);
 		GUI["2"]["Name"] = [[Main]];
 		
 		-- StarterGui.MergeLib.Main.TopBar
