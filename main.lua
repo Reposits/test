@@ -51,7 +51,7 @@ function Library:new(options)
 		GUI["2"]["BorderSizePixel"] = 0;
 		GUI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 		GUI["2"]["AnchorPoint"] = Vector2.new(0, 0);
-		GUI["2"]["Size"] = UDim2.new(0, 600, 0, 350);
+		GUI["2"]["Size"] = UDim2.new(0.45, 0 ,0.51, 0);
 		GUI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 		GUI["2"]["Position"] = UDim2.fromOffset((viewport.X/2) - (GUI["2"].Size.X.Offset / 2), (viewport.Y/2) - (GUI["2"].Size.Y.Offset / 2));
 		GUI["2"]["Name"] = [[Main]];
@@ -122,16 +122,18 @@ function Library:new(options)
 		GUI["4c"]["Rotation"] = 90;
 		
 		-- StarterGui.MergeLibrary.Main.NotifContainer
-		GUI["71"] = Instance.new("Frame", GUI["2"]);
+		GUI["71"] = Instance.new("Frame", GUI["1"]);
 		GUI["71"]["BorderSizePixel"] = 0;
 		GUI["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 		GUI["71"]["AnchorPoint"] = Vector2.new(1, 0.5);
 		GUI["71"]["BackgroundTransparency"] = 1;
-		GUI["71"]["Size"] = UDim2.new(0, 300, 0, 552);
+		GUI["71"]["Size"] = UDim2.new(0.22, 0, 1, 0);
 		GUI["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-		GUI["71"]["Position"] = UDim2.new(1, 361, 0, 211);
+		GUI["71"]["Position"] = UDim2.new(1, 0, 0.5, 0);
 		GUI["71"]["Name"] = [[NotifContainer]];
 	end
+	
+	
 	
 	-- Navigation
 	function GUI:Navigation()
@@ -160,9 +162,9 @@ function Library:new(options)
 			Navigation["4e"]["BorderSizePixel"] = 0;
 			Navigation["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 			Navigation["4e"]["BackgroundTransparency"] = 1;
-			Navigation["4e"]["Size"] = UDim2.new(1, 0, 0.9035277366638184, 0);
+			Navigation["4e"]["Size"] = UDim2.new(1, 0, 0.913, 0);
 			Navigation["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-			Navigation["4e"]["Position"] = UDim2.new(0, 0, 0.09647224843502045, 0);
+			Navigation["4e"]["Position"] = UDim2.new(0, 0, 0.086, 0);
 			Navigation["4e"]["Name"] = [[hold]];
 
 			-- StarterGui.MergeLib.Main.Nav.hold.UIPadding
@@ -194,7 +196,7 @@ function Library:new(options)
 			Navigation["58"]["AnchorPoint"] = Vector2.new(1, 0);
 			Navigation["58"]["Size"] = UDim2.new(0.9428571462631226, -2, 0, -2);
 			Navigation["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-			Navigation["58"]["Position"] = UDim2.new(1, 0, 0.09646302461624146, 0);
+			Navigation["58"]["Position"] = UDim2.new(1, 0, 0, 27);
 			Navigation["58"]["Name"] = [[lineX]];
 
 			-- StarterGui.MergeLib.Main.Nav.UserText
@@ -1463,12 +1465,8 @@ function Library:new(options)
 		}, options or {})
 		
 		local Notification = {
-			items = {}
+			Items = {}
 		}
-		
-		-- Logic
-		do
-		end
 		
 		-- Render
 		do
@@ -1487,7 +1485,7 @@ function Library:new(options)
 			Notification["74"] = Instance.new("Frame", GUI["71"]);
 			Notification["74"]["BorderSizePixel"] = 0;
 			Notification["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-			Notification["74"]["Size"] = UDim2.new(0, 300, 0, 100);
+			Notification["74"]["Size"] = UDim2.new(0.99, 0, 0, 100);
 			Notification["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 			Notification["74"]["Position"] = UDim2.new(0, 0, 0.8165137767791748, 0);
 			Notification["74"]["Name"] = [[Notification]];
@@ -1540,7 +1538,7 @@ function Library:new(options)
 			Notification["7b"]["TextSize"] = 14;
 			Notification["7b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 			Notification["7b"]["AnchorPoint"] = Vector2.new(0, 0.5);
-			Notification["7b"]["Size"] = UDim2.new(0, 200, 1, 0);
+			Notification["7b"]["Size"] = UDim2.new(0.81, 0, 1, 0);
 			Notification["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 			Notification["7b"]["Text"] = options.title;
 			Notification["7b"]["BackgroundTransparency"] = 1;
@@ -1625,9 +1623,9 @@ function Library:new(options)
 			Notification["84"] = Instance.new("Frame", Notification["74"]);
 			Notification["84"]["BorderSizePixel"] = 0;
 			Notification["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-			Notification["84"]["Size"] = UDim2.new(0, 275, 0, 1);
+			Notification["84"]["Size"] = UDim2.new(0.95, 0, 0, 1);
 			Notification["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-			Notification["84"]["Position"] = UDim2.new(0, 7, 0, 43.5);
+			Notification["84"]["Position"] = UDim2.new(0, 7, 0, 42);
 
 			-- StarterGui.MergeLibrary.Main.NotifContainer.Notification.Frame.UIGradient
 			Notification["85"] = Instance.new("UIGradient", Notification["84"]);
@@ -1637,6 +1635,9 @@ function Library:new(options)
 		end
 		
 		-- Methods
+		
+		
+		
 		function Notification:Remove(id)
 			if Notification ~= nil then
 					for i, v in pairs(Notification) do
