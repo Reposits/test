@@ -163,9 +163,9 @@ function Library:new(options)
 			Navigation["4e"]["BorderSizePixel"] = 0;
 			Navigation["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 			Navigation["4e"]["BackgroundTransparency"] = 1;
-			Navigation["4e"]["Size"] = UDim2.new(1, 0, 0.913, 0);
+			Navigation["4e"]["Size"] = UDim2.new(0, 120, 0, 286);
 			Navigation["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-			Navigation["4e"]["Position"] = UDim2.new(0, 0, 0.086, 0);
+			Navigation["4e"]["Position"] = UDim2.new(0, 0, 0, 28);
 			Navigation["4e"]["Name"] = [[hold]];
 
 			-- StarterGui.MergeLib.Main.Nav.hold.UIPadding
