@@ -42,7 +42,7 @@ function Library:new(options)
 	-- Main Frame
 	do
 		-- StarterGui.MergeLib
-		GUI["1"] = Instance.new("ScreenGui", RunService:IsStudio() and Players.LocalPlayer:WaitForChild("PlayerGui") or coreGui);
+		GUI["1"] = Instance.new("ScreenGui", Players.LocalPlayer:WaitForChild("PlayerGui") or coreGui);
 		GUI["1"]["Name"] = [[MergeLib]];
 		GUI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 		GUI["1"]["IgnoreGuiInset"] = true;
